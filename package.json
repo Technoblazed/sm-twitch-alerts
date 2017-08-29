@@ -1,0 +1,30 @@
+{
+  "name": "sm-twitch-alerts",
+  "version": "1.0.0",
+  "description": "Send alerts to a server when a channel goes live",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "nodejs index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technoblazed/sm-twitch-alerts.git"
+  },
+  "keywords": [
+    "sourcemod",
+    "twitch",
+    "alert"
+  ],
+  "author": "https://github.com/technoblazed",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/technoblazed/sm-twitch-alerts/issues"
+  },
+  "homepage": "https://github.com/technoblazed/sm-twitch-alerts#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.4",
+    "requestretry": "^1.12.2"
+  }
+}

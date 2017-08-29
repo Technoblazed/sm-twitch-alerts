@@ -1,0 +1,12 @@
+{
+    "twitch": {
+        "clientID": "",
+        "channels": [
+            "techno",
+            "technoblazed"
+        ]
+    },
+    "servers": {
+
+    }
+}
