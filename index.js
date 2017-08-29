@@ -12,20 +12,20 @@ function updateCache () {
   if (Object.keys(channels).length === 0) {
     console.log('No channels specified in config!');
     process.exit(1);
-  } else {
-    _.forEach(config.twitch.channels, function (player) {
-      return getStreamInfo(player).then(function (result) {
-        if (result.stream !== null) {
-          if (pastAlerts[result.id] === undefined || pastAlerts[result.id]._id !== result.stream._id) {
-            pastAlerts[result.id] = result.stream;
-            /*
-            Send the Rcon request here
-             */
-          }
-        }
-      });
-    });
   }
+
+  _.forEach(config.twitch.channels, function (player) {
+    return getStreamInfo(player).then(function (result) {
+      if (result.stream !== null) {
+        if (pastAlerts[result.id] === undefined || pastAlerts[result.id]._id !== result.stream._id) {
+          pastAlerts[result.id] = result.stream;
+          /*
+          Send the Rcon request here
+          */
+        }
+      }
+    });
+  });
 }
 
 updateCache();
